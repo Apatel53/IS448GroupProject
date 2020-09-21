@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Aboutme.html -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- mobile page sixe -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <title>Test page</title>
+  </head>
+  <body>
+    <main id="app">
+      <p>Look at this random variable:</p>
+      <p>{{ randomVariable }}</p>
+      <p>You can use the curly brackets to insert variables</p>
+    </main>
+
+    <!-- include vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        // the elemnt we are looking at, the framework can't see anything else
+        el: '#app',
+        // variables
+        data: {
+          randomVariable: 'Test thing haha',
+        },
+      })
+    </script>
+  </body>
+</html>
