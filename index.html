@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<!-- Aboutme.html -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- mobile page sixe -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
-    />
-    <title>Test page</title>
+    <!-- mobile page size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Restaurant</title>
   </head>
-  <body>
-    <main id="app">
-      <p>Look at this random variable:</p>
-      <p>{{ randomVariable }}</p>
-      <p>You can use the curly brackets to insert variables</p>
-    </main>
 
-    <!-- include vue -->
+  <body>
+    <div id="app" v-cloak>
+      <nav-bar></nav-bar>
+
+      <main>
+        <!-- this is where we write our main html! -->
+        <p>Use curly brackets to insert variables like {{ randomVar }}</p>
+        <p>or {{ otherVar }}</p>
+        <button @click="addToRandomVar">Click to add to the 1st</button>
+        <button @click="subtractFromOtherVar">This subtracts from 2nd</button>
+      </main>
+    </div>
+
+    <!-- including vue and the navigation -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="nav.js"></script>
     <script>
+      // this is where we write our js!
       var app = new Vue({
-        // the elemnt we are looking at, the framework can't see anything else
-        el: '#app',
-        // variables
+        el: '#app', // this makes Vue look at the div called "app"
+
+        // variables (data)
         data: {
-          randomVariable: 'Test thing haha',
+          randomVar: 1,
+          otherVar: 20
         },
+
+        // methods (functions)
+        methods: {
+          addToRandomVar() {
+            this.randomVar = this.randomVar + 1;
+          },
+          subtractFromOtherVar() {
+            this.otherVar = this.otherVar - 1;
+          }
+        }
       })
     </script>
   </body>

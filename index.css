@@ -1,0 +1,13 @@
+[v-cloak] {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  padding: 1em;
+  background-color: #ccccff;
+}
