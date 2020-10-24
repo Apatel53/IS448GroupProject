@@ -1,13 +1,53 @@
+/* Hiding the Vue content until it loads */
+
 [v-cloak] {
   display: none;
 }
 
+/* Main styles */
+
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oleo Script', cursive;
+  font-weight: normal;
+}
+
+main {
+  padding: 1em;
+}
+
+/* Nav and Footer */
 
 nav {
   width: 100%;
   padding: 1em;
-  background-color: #ccccff;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #44312B;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+nav a:hover {
+  color: #329DC9;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #DBC9C3;
+}
+
+footer img {
+  width: 32px;
+  margin: 8px;
+  vertical-align: middle;
 }

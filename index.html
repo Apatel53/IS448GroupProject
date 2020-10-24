@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <!-- mobile page size -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oleo+Script&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet" />
-    <title>Restaurant</title>
+    <title>Retriever Café</title>
   </head>
 
   <body>
@@ -14,11 +15,13 @@
 
       <main>
         <!-- this is where we write our main html! -->
-        <p>Use curly brackets to insert variables like {{ randomVar }}</p>
+        <h1>Use curly brackets to insert variables like {{ randomVar }}</h1>
         <p>or {{ otherVar }}</p>
         <button @click="addToRandomVar">Click to add to the 1st</button>
         <button @click="subtractFromOtherVar">This subtracts from 2nd</button>
       </main>
+
+      <nav-footer></nav-footer>
     </div>
 
     <!-- including vue and the navigation -->
