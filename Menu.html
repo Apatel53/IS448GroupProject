@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- mobile page size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
+    <title>Retriever Café</title>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <nav-bar></nav-bar>
+
+      <main class="menu">
+        <!-- this is where we write our main html! -->
+        <h1>Menu</h1>
+
+        <span v-for="(category, i) in categories" :key="category.name">
+          <button @click="switchTab(i)" :class="{ selected: tab == i }">
+            {{ category.name }}
+          </button>
+        </span>
+
+        <hr>
+
+        <div v-for="item in categories[tab].items" :key="item.name" class="row">
+          <img :src="item.image" />
+          <div>
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+
+      </main>
+
+      <nav-footer></nav-footer>
+    </div>
+
+    <!-- including vue and the navigation -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="nav.js"></script>
+    <script>
+      // this is where we write our js!
+      var app = new Vue({
+        el: '#app', // this makes Vue look at the div called "app"
+
+        // variables (data)
+        data: {
+          tab: 2,
+          categories: [
+            {
+              name: "Drinks",
+              items: [
+                {
+                  name: "Sample Drink",
+                  description: "Water is great. And free.",
+                  image: "https://www.aces.edu/wp-content/uploads/2020/06/A-Glass-of-water-on-white-background-1161576130_5760x3840-scaled-e1593446976432.jpeg"
+                },
+                {
+                  name: "Sample Drink 2",
+                  description: "idk"
+                }
+              ]
+            },
+            {
+              name: "Appetizers",
+              items: []
+            },
+            {
+              name: "Entrees",
+              items: [
+                {
+                  name: "Sample Entree",
+                  description: "Some description here.",
+                  image: "https://previews.123rf.com/images/losgar/losgar1802/losgar180200019/95881989-closeup-of-uncooked-italian-pasta-elbow-macaroni.jpg"
+                },
+                {
+                  name: "Sample Entree 2",
+                  description: "idk"
+                }
+              ]
+            },
+            {
+              name: "Kids",
+              items: []
+            },
+            {
+              name: "Desserts",
+              items: []
+            }
+          ]
+        },
+
+        // methods (functions)
+        methods: {
+          switchTab(i) {
+            this.tab = i;
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

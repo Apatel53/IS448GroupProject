@@ -1,11 +1,11 @@
 Vue.component('nav-bar', {
   template: `
   <nav>
-    <a href="./home">Home (logo here)</a>
+    <a href="./index.html">Home (logo here)</a>
     <div style="float: right">
-      <a href="./menu">Menu</a>
-      <a href="./about">About</a>
-      <a href="./reviews">Reviews</a>
+      <a href="./Menu.html">Menu</a>
+      <a href="./About.html">About</a>
+      <a href="./Reviews.html">Reviews</a>
     </div>
   </nav>
   `
