@@ -14,11 +14,15 @@
       <nav-bar></nav-bar>
 
       <main>
-        <!-- this is where we write our main html! -->
-        <h1>Use curly brackets to insert variables like {{ randomVar }}</h1>
-        <p>or {{ otherVar }}</p>
-        <button @click="addToRandomVar">Click to add to the 1st</button>
-        <button @click="subtractFromOtherVar">This subtracts from 2nd</button>
+        <h1 class="title">Retriver Café</h1>
+        <p>The best food at UMBC</p>
+
+        <img src="">
+
+        <a href="./Menu.html" class="fancy-button">See our menu</a>
+
+        <hr>
+        <p>Disclaimer: all information on this website is made up</p>
       </main>
 
       <nav-footer></nav-footer>
@@ -31,22 +35,6 @@
       // this is where we write our js!
       var app = new Vue({
         el: '#app', // this makes Vue look at the div called "app"
-
-        // variables (data)
-        data: {
-          randomVar: 1,
-          otherVar: 20
-        },
-
-        // methods (functions)
-        methods: {
-          addToRandomVar() {
-            this.randomVar = this.randomVar + 1;
-          },
-          subtractFromOtherVar() {
-            this.otherVar = this.otherVar - 1;
-          }
-        }
       })
     </script>
   </body>

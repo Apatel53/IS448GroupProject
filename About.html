@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- mobile page size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
+    <title>Retriever Café</title>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <nav-bar></nav-bar>
+
+      <main class="about">
+        <!-- this is where we write our main html! -->
+        <h1>About Us</h1>
+
+        <hr>
+
+        <h2>We started as an aspiring group of college students</h2>
+        <p>The Retriever Café began when students at UMBC, realizing the shortcomings of Dhall, proposed to cook special meals to offer at various events. In time, the Café became popular enough to expand. With an official location, the Retriever Café is now open to anyone, any time.</p>
+
+        <h2>Our staff will provide the best dine-in experience possible</h2>
+        <p>At Retriever Café, our staff is dedicated to making wait-times short, keeping the Café clean, and of course, serving amazing food.</p>
+
+        <h2>Valuing the customer and quality</h2>
+        <p>Since the beginning, our Café has been about serving high quality food to everyone. We strive to create a positive, friendly environment where anyone can enjoy delicious food.</p>
+
+      </main>
+
+      <nav-footer></nav-footer>
+    </div>
+
+    <!-- including vue and the navigation -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="nav.js"></script>
+    <script>
+      // this is where we write our js!
+      var app = new Vue({
+        el: '#app', // this makes Vue look at the div called "app"
+      })
+    </script>
+  </body>
+</html>
