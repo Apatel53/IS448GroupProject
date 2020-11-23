@@ -1,8 +1,8 @@
 Vue.component('nav-bar', {
   template: `
   <nav>
-    <a href="./index.html">Home (logo here)</a>
-    <div style="float: right">
+    <a href="./index.html"><img src="./images/logo.png"></a>
+    <div class="nav-links">
       <a href="./Menu.html">Menu</a>
       <a href="./About.html">About</a>
       <a href="./Reviews.html">Reviews</a>
