@@ -17,7 +17,7 @@ Vue.component('nav-footer', {
     <a v-for="site of sites" :key="site" :href="'https://' + site + '.com'">
       <img :src="'images/' + site + '.png'"/>
     </a>
-    <p>© 2020 Retriever Café. All rights reserved.</p>
+    <p>© 2020 Retriever Café. For class purposes. Images from Olive Garden</p>
   </footer>
   `,
   data() {
